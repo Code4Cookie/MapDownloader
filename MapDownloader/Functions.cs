@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace MapDownloader
 {
-	public static class Functions
+    public static class Functions
 	{
-        //https://stackoverflow.com/a/38604462
+        // https://stackoverflow.com/a/38604462
         public static void OpenBrowser(string url)
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))

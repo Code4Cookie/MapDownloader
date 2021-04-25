@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+VisualStudioVersion = 16.0.30803.129
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapDownloader", "MapDownloader\MapDownloader.csproj", "{BE56CB0A-CC0C-4511-9C71-83F25FE11037}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapDownloader", "MapDownloader\MapDownloader.csproj", "{73B1968C-5A45-47D4-8C12-9B649A4D982F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BE56CB0A-CC0C-4511-9C71-83F25FE11037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE56CB0A-CC0C-4511-9C71-83F25FE11037}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE56CB0A-CC0C-4511-9C71-83F25FE11037}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE56CB0A-CC0C-4511-9C71-83F25FE11037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B1968C-5A45-47D4-8C12-9B649A4D982F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B1968C-5A45-47D4-8C12-9B649A4D982F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B1968C-5A45-47D4-8C12-9B649A4D982F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B1968C-5A45-47D4-8C12-9B649A4D982F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {087A69E5-A2D0-4223-B170-72DD693CEF57}
+		SolutionGuid = {647F9460-BFEA-45FE-B82B-1588153967F0}
 	EndGlobalSection
 EndGlobal
