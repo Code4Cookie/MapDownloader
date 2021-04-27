@@ -1,21 +1,14 @@
 ﻿using ICSharpCode.SharpZipLib.BZip2;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MapDownloader
 {
@@ -139,6 +132,12 @@ namespace MapDownloader
 
         private void btnMain_Click_Download(object sender, EventArgs e)
         {
+            if (DirectoryTextBox.Text == "")
+            {
+                MessageBox.Show("You must select an output folder!", "Error");
+                return;
+            }
+
             ToggleMode(false);
             processed = 0;
 
@@ -192,9 +191,8 @@ namespace MapDownloader
             DownloadInfoRichText.AppendText(realMapList.Count + " total maps found in server map list");
 
             toDownloadCount = toDownloadList.Count;
-            DownloadProgressBar.Maximum = toDownloadCount / 100;
+            DownloadProgressBar.Maximum = toDownloadCount;
             DownloadProgressBar.Value = 0;
-        //    DownloadProgressBar.Step = 1;
 
             if (toDownloadCount != 0)
             {
@@ -242,13 +240,17 @@ namespace MapDownloader
         //    txtMapsDir.Enabled = defaultState;
         }
 
-        private void btnMain_Click_Download(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BrowseFolderButton_Click(object sender, RoutedEventArgs e)
         {
+            using (var dialog = new CommonOpenFileDialog())
+            {
+                dialog.IsFolderPicker = true;
+
+                if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+                {
+                    DirectoryTextBox.Text = dialog.FileName.EndsWith(@"\") ? dialog.FileName : dialog.FileName + @"\";
+                }
+            }
 
         }
 
